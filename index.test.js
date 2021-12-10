@@ -1,6 +1,7 @@
 const cal = require('./index');
 const inputString = require('./index');
 const rev = require('./index');
+const cap = require('./index');
 
 
 describe('calculator', () => {
@@ -21,19 +22,35 @@ describe('calculator', () => {
     });
 });
 
+describe('stringLength', () => {
 
-it('stringLength characters count', () => {
-  expect(inputString.stringLength('mihreteab')).toBe(9);
+    it('stringLength characters count', () => {
+    expect(inputString.stringLength('mihreteab')).toBe(9);
+    });
+
+    it('stringLength is at least 1 character long', () => {
+    expect(inputString.stringLength('mre')).toBeGreaterThan(0);
+    });
+
+    it('stringLength is longer than 10 characters', () => {
+    expect(inputString.stringLength('mre')).toBeLessThan(10);
+    });
 });
 
-it('stringLength is at least 1 character long', () => {
-  expect(inputString.stringLength('mre')).toBeGreaterThan(0);
+describe('reverseString', () => {
+
+    test('reverseString function', () => {
+        expect(rev.reverseString('mre')).toBe('erm');
+    });
 });
 
-it('stringLength is longer than 10 characters', () => {
-  expect(inputString.stringLength('mre')).toBeLessThan(10);
-});
+describe('Capitalize', () => {
 
-test('reverseString function', () => {
-    expect(rev.reverseString('mre')).toBe('erm');
+    test('capitalize the string', () => {
+        expect(cap.capitalizer('abc')).toBe('Abc');
+    });
+
+    test('Capitalize class', () => {
+        expect(new cap.CapitalizeClass().name('aa')).toBe('aa');
+    });
 });

@@ -16,4 +16,14 @@ function reverseString(str) {
     return str.split('').reverse().join('');
 }
 
-module.exports = { calculator, stringLength, reverseString };
+class CapitalizeClass {
+    name(str) {
+      return str;
+    }
+}
+  
+function capitalizer(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+module.exports = { calculator, stringLength, reverseString, CapitalizeClass, capitalizer };
