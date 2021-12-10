@@ -10,6 +10,10 @@ function stringLength(str) {
       throw 'String character have to be greather than 0 and less than 10.'
     }
     return str.length;
-  }
+}
 
-module.exports = { calculator, stringLength };
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+module.exports = { calculator, stringLength, reverseString };

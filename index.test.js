@@ -1,5 +1,6 @@
 const cal = require('./index');
 const inputString = require('./index');
+const rev = require('./index');
 
 
 describe('calculator', () => {
@@ -31,4 +32,8 @@ it('stringLength is at least 1 character long', () => {
 
 it('stringLength is longer than 10 characters', () => {
   expect(inputString.stringLength('mre')).toBeLessThan(10);
+});
+
+test('reverseString function', () => {
+    expect(rev.reverseString('mre')).toBe('erm');
 });
