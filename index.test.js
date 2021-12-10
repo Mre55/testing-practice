@@ -1,4 +1,6 @@
 const cal = require('./index');
+const inputString = require('./index');
+
 
 describe('calculator', () => {
     test('add', () => {
@@ -16,4 +18,17 @@ describe('calculator', () => {
     test('divide', () => {
         expect(cal.calculator.divide(4,2)).toBe(2);
     });
+});
+
+
+it('stringLength characters count', () => {
+  expect(inputString.stringLength('mihreteab')).toBe(9);
+});
+
+it('stringLength is at least 1 character long', () => {
+  expect(inputString.stringLength('mre')).toBeGreaterThan(0);
+});
+
+it('stringLength is longer than 10 characters', () => {
+  expect(inputString.stringLength('mre')).toBeLessThan(10);
 });

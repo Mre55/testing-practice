@@ -5,4 +5,11 @@ const calculator = {
     divide: function(a, b) {return a/b}
 }
 
-module.exports = { calculator };
+function stringLength(str) {
+    if((str < 1) || (str > 10)) {
+      throw 'String character have to be greather than 0 and less than 10.'
+    }
+    return str.length;
+  }
+
+module.exports = { calculator, stringLength };
